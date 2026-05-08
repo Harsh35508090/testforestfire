@@ -1,0 +1,12 @@
+[1mdiff --git a/application.py b/application.py[m
+[1mindex 86f9e13..cc8e9cf 100644[m
+[1m--- a/application.py[m
+[1m+++ b/application.py[m
+[36m@@ -25,6 +25,7 @@[m [mdef predict_datapoint():[m
+         Classes=float(request.form.get('Classes'))[m
+         Region=float(request.form.get('Region'))[m
+ [m
+[32m+[m[41m [m
+         new_scaled_data=standerd_scaler.transform([[Temperature,RH,Ws,Rain,FFMC,DMC,ISI,Classes,Region]])[m
+         result = ridge_model.predict(new_scaled_data)[m
+ [m
