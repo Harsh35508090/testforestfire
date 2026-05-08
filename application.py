@@ -25,6 +25,7 @@ def predict_datapoint():
         Classes=float(request.form.get('Classes'))
         Region=float(request.form.get('Region'))
 
+ 
         new_scaled_data=standerd_scaler.transform([[Temperature,RH,Ws,Rain,FFMC,DMC,ISI,Classes,Region]])
         result = ridge_model.predict(new_scaled_data)
 
